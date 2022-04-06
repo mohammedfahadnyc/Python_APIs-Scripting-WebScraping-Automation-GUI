@@ -3,6 +3,12 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 5 : Nato Phonetic Converted
+
+
+https://user-images.githubusercontent.com/54411378/161923397-0cdce28c-5732-49d5-a35c-1efc489d72ba.mov
+
+
 
 Demo 4 : US States Game
 
