@@ -43,10 +43,7 @@ while is_game_on :
 
     if answer.lower() == "exit":
         is_game_on = False
-        new_list = []
-        for states in states_list:
-            if states not in repetetive_list:
-                new_list.append(states)
+        new_list = [states for states in states_list if states not in repetetive_list]
         missed_states_csv = pandas.DataFrame(new_list).to_csv("missed_states")
 
     screen.update()
