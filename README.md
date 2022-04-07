@@ -3,6 +3,13 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 6 : Pomodoro - GUI  Desktop App
+
+
+
+https://user-images.githubusercontent.com/54411378/162135782-2182aeb6-fee4-4690-9e1d-a253a8f52754.mov
+
+
 Demo 5 : Nato Phonetic Converted
 
 
