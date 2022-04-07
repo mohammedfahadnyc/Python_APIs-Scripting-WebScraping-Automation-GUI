@@ -3,6 +3,14 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+
+Demo 7 : Password Manager GUI
+
+
+https://user-images.githubusercontent.com/54411378/162154981-b99b2baa-edf1-412b-a90e-f50de52035b7.mov
+
+
+
 Demo 6 : Pomodoro - GUI  Desktop App
 
 
