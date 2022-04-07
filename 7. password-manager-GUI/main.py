@@ -7,6 +7,7 @@ from tkinter import *
 from tkinter import messagebox
 import password_generator
 import pyperclip
+import pandas
 FONT= ("Aerial",15,"normal")
 
 
@@ -26,6 +27,8 @@ def add_password():
         if save :
             with open(file="password.txt",mode="a") as file :
                 file.write(f"\n {website}|  {email } |  {password} ")
+                read_file = pandas.read_csv("password.txt")
+                read_file.to_csv("password.csv")
             website_entry.delete(0,END)
             password_entry.delete(0,END)
 
