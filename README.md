@@ -3,6 +3,15 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 8 :
+FlashCard App Learn Any language : This GUI desktop app helps you learn words of any language. It shows a word and after 3 seconds show its meaning,
+if you knew the word, click checkmark and it will not show again, if you didnt know, click cross and it will randomly show up again. Demo :
+
+
+
+https://user-images.githubusercontent.com/54411378/162414307-6ef7e676-35be-47be-a470-8e83dab12a3e.mov
+
+
 
 Demo 7 : Password Manager GUI
 
