@@ -2,6 +2,12 @@
 Dozens Of Side Projects In Python
 
 Demo of side all projects :
+Demo 9 : Automated Birthday Wisher (smtplib, datetime and pandas)
+
+
+
+https://user-images.githubusercontent.com/54411378/162441669-8cc0cdb0-903d-4add-bc43-8d1a56ccfdfd.mov
+
 
 Demo 8 :
 FlashCard App Learn Any language : This GUI desktop app helps you learn words of any language. It shows a word and after 3 seconds show its meaning,
