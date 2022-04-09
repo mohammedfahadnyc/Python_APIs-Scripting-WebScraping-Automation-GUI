@@ -3,6 +3,14 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 12 : Rain Alert Sms Service : Fetch Data Daily For Current Location using Openweather Map One Call API and if there's a chance of rain that day,
+sends an alert sms to the user using Twillo API's SMS Service. Demo here:
+
+
+https://user-images.githubusercontent.com/54411378/162573498-e3db8e20-869d-470c-90b4-e811f185a190.mp4
+
+
+
 
 Demo 11 : GUI Quizz App using Open Trivia API - Everytime the program is run or all question in current question bank is ended, it generates new question
 bank from Open Trivia API (https://opentdb.com/api.php?amount=1&type=boolean) and asks user's True/False Questions.Simply by chaging API parameters
