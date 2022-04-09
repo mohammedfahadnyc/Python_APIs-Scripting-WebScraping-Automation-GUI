@@ -5,7 +5,8 @@ Demo of side all projects :
 
 
 Demo 11 : GUI Quizz App using Open Trivia API - Everytime the program is run or all question in current question bank is ended, it generates new question
-bank from Open Trivia API (https://opentdb.com/api.php?amount=1&type=boolean) and asks user's True/False Questions. Demo here :
+bank from Open Trivia API (https://opentdb.com/api.php?amount=1&type=boolean) and asks user's True/False Questions.Simply by chaging API parameters
+broad topics can be taught and tested with this desktop app. Demo here :
 
 
 https://user-images.githubusercontent.com/54411378/162562517-18890b46-d8e2-49a5-b775-8f4bff885024.mov
