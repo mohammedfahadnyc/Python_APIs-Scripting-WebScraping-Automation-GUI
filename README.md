@@ -2,6 +2,15 @@
 Dozens Of Side Projects In Python
 
 Demo of side all projects :
+
+Demo 10 :
+ISS Overhead Notifier And Kanye Quotes :
+Gets International Space Station Location from Open Notify API (http://open-notify.org/Open-Notify-API/ISS-Location-Now/) and gets the 
+user's location's sunset and sunrise time from sunset-sunrise API(https://sunrise-sunset.org/api). If its night time and and the ISS Satellite is crossing 
+user's location nearby, it will send an email to the user to look Up! Scans for every 60 Seconds Automatically . Kanye quotes on the other hand
+generates randon kanye quotes from Kanye Quote's API and post it to GUI Application For The User.
+
+
 Demo 9 : Automated Birthday Wisher (smtplib, datetime and pandas)
 
 
