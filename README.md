@@ -3,6 +3,13 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 14 : Workout Tracker - User writes in plain english about their workout, using Nutrionix API's Natural Labguage Processing power, this program extracts workout data and calories, duration, types of exercise and then automatically logs it into a google sheet using Sheety API. Demo here:
+
+https://user-images.githubusercontent.com/54411378/162612782-b0ac0d92-69cb-4912-aa38-57571c3fecd1.mov
+
+
+
+
 Demo 13 : Stock News Alert : This Application fetches data for a given company's stock price from The Alpha Vantage API and If there's a pre defined fluctuation in closing prices for today and yesterday, sends a message using Twillo SMS API to the user with top three articles on that stock fetched from News API.
 Demo Here :
 
