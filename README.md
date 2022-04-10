@@ -3,6 +3,13 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 13 : Stock News Alert : This Application fetches data for a given company's stock price from The Alpha Vantage API and If there's a pre defined fluctuation in closing prices for today and yesterday, sends a message using Twillo SMS API to the user with top three articles on that stock fetched from News API.
+Demo Here :
+
+https://user-images.githubusercontent.com/54411378/162604996-195e7376-7239-401e-8a04-09e1235ade5d.mov
+
+
+
 Demo 12 : Rain Alert Sms Service : Fetch Data Daily For Current Location using Openweather Map One Call API and if there's a chance of rain that day,
 sends an alert sms to the user using Twillo API's SMS Service. Demo here:
 
@@ -98,4 +105,6 @@ Demo 1 : Hirst Painting
 
 
 https://user-images.githubusercontent.com/54411378/161897130-2ac4a301-e867-4ecc-ada5-921ac94fe468.mov
+
+
 
