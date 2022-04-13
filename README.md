@@ -2,6 +2,9 @@
 Dozens Of Side Projects In Python
 
 Demo of side all projects :
+Demo 16 : Spotify API Musical Time Machine : This Program takes any date input from the user and then Go to scrape billboard top 100 for that day and
+then can create a spotify playlist and add all those top 100 songs on that Playlist. (Web Scraping with Beautiful Soup + Spotify API)
+
 
 Demo 15 : Web Scraping with Beautiful Soup : This program scrapes empire's Top 100 movies to watch and exports the all the movues titles in a text file
 sorting from 1 to 100 in order, demo here :
