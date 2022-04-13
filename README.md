@@ -3,6 +3,13 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 15 : Web Scraping with Beautiful Soup : This program scrapes empire's Top 100 movies to watch and exports the all the movues titles in a text file
+sorting from 1 to 100 in order, demo here :
+
+
+https://user-images.githubusercontent.com/54411378/163221263-d7301ac6-0104-4e39-840d-b8666d83e0cd.mov
+
+
 Demo 14 : Workout Tracker - User writes in plain english about their workout, using Nutrionix API's Natural Labguage Processing power, this program extracts workout data and calories, duration, types of exercise and then automatically logs it into a google sheet using Sheety API. Demo here:
 
 https://user-images.githubusercontent.com/54411378/162612782-b0ac0d92-69cb-4912-aa38-57571c3fecd1.mov
