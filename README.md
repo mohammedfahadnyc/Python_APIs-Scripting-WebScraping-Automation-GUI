@@ -2,6 +2,16 @@
 Dozens Of Side Projects In Python
 
 Demo of side all projects :
+
+Demo 17 - Web Scraping : Amazon Price Alert - Using Beautiful Soup, this program Tracks Amazon Price of a Product and if price drops below desired price
+of the user, it notifies the user with an email price drop alert.
+Demo Here :
+
+https://user-images.githubusercontent.com/54411378/163327613-4861ccb0-7fc5-467a-b67d-96e5a56c6539.mov
+
+
+
+
 Demo 16 : Spotify API Musical Time Machine : This Program takes any date input from the user and then Go to scrape billboard top 100 for that day and
 then can create a spotify playlist and add all those top 100 songs on that Playlist. (Web Scraping with Beautiful Soup + Spotify API)
 
