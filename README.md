@@ -2,6 +2,12 @@
 Dozens Of Side Projects In Python
 
 Demo of side all projects :
+Demo 18 : Selenium Webdriver Automation - Cookie Bot : Automatically Play the cookie game found at https://orteil.dashnet.org/cookieclicker/ and automatically buys upgrades. Demo :
+
+
+
+https://user-images.githubusercontent.com/54411378/163569840-9979ad3f-db72-46c2-81dd-8d2940e18573.mov
+
 
 Demo 17 - Web Scraping : Amazon Price Alert - Using Beautiful Soup, this program Tracks Amazon Price of a Product and if price drops below desired price
 of the user, it notifies the user with an email price drop alert.
