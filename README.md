@@ -2,6 +2,14 @@
 Dozens Of Side Projects In Python
 
 Demo of side all projects :
+
+Demo 19 : This program can Automatically login to user's kogin and  Apply To any and every Linkedin Job. Using Selenium Webdriver Automation,
+Demo Here :
+
+
+https://user-images.githubusercontent.com/54411378/163580531-c5b7f334-b501-4a94-b009-797052b2ce28.mov
+
+
 Demo 18 : Selenium Webdriver Automation - Cookie Bot : Automatically Play the cookie game found at https://orteil.dashnet.org/cookieclicker/ and automatically buys upgrades. Demo :
 
 
