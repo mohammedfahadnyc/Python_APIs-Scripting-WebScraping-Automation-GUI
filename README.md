@@ -3,6 +3,11 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 21 : Get the Current Internet Speed and Compare it with Promised speed from the ISP. If it's slower than the promised speed, Send a tweet to the ISP
+Demo here :
+https://user-images.githubusercontent.com/54411378/163729338-62636187-8f2b-4fca-8b3c-f9d8ed057a91.MOV
+
+
 Demo 20 : Tinder Auto Swipe and Match Bot - This program logs in to user's tinder and auto swipes and matches to tinder date. Demo here :
 
 https://user-images.githubusercontent.com/54411378/163728147-b0da289a-9e39-4a75-90f6-5cf65684fadb.MOV
