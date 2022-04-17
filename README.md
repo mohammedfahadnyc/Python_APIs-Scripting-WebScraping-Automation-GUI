@@ -3,6 +3,12 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 23 : Automated Zillow Housing Market Research - This program Finds all the listings and links to the listings and prices and then fills out automatically google form and submits the data for each listing (Used Beautiful Soup to Scrap and Selenium to fill out forms)
+Demo :
+
+https://user-images.githubusercontent.com/54411378/163732057-cfd8ac0b-fd5c-44ee-9952-0c9a6848b0a8.mov
+
+
 Demo 22 : Instagram Follower Bot : Follows Any Given Instagram account and follow all of the account's followers.
 
 Demo 21 : Get the Current Internet Speed and Compare it with Promised speed from the ISP. If it's slower than the promised speed, Send a tweet to the ISP
