@@ -3,6 +3,8 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 22 : Instagram Follower Bot : Follows Any Given Instagram account and follow all of the account's followers.
+
 Demo 21 : Get the Current Internet Speed and Compare it with Promised speed from the ISP. If it's slower than the promised speed, Send a tweet to the ISP
 Demo here :
 https://user-images.githubusercontent.com/54411378/163729338-62636187-8f2b-4fca-8b3c-f9d8ed057a91.MOV
