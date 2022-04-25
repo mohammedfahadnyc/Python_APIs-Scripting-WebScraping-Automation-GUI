@@ -166,3 +166,7 @@ https://user-images.githubusercontent.com/54411378/161897130-2ac4a301-e867-4ecc-
 
 
 
+Demo 24 (Web Dev): Cafe and Wifi Rating Site - Users can go to this site and check for cafes ratings based on coffee,wifi quality and power socket availibility. Hidden Url avaiable to submit ratings as well.(Flask,Bootstrap, WTForms) Demo :
+
+https://user-images.githubusercontent.com/54411378/165062689-dc2e961a-e224-4c17-952e-ecdd0c600064.MOV
+
