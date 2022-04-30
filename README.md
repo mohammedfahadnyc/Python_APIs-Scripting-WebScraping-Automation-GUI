@@ -3,6 +3,13 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 25 : Movie Ranking - User can add any movies they want, they just need to enter the title and it shows all relevant titles,
+then user selects their desired title, add their ratings and reviews and based on ranking,and the movie gets added to user's databse, the program also fetches the movie's description,rating,cover photo and displays them in the website. the home page ranks all movies in the user's database in a descending  order based on ranking. (Flask For Backend, Databased Used SQLite3 and SQLAlchemy, for fetching movies and data, used https://developers.themoviedb.org/3 API).Demo here:
+
+https://user-images.githubusercontent.com/54411378/166095291-41ef6391-8575-4ca2-906c-4539f38f523a.mov
+
+
+
 Demo 23 : Automated Zillow Housing Market Research - This program Finds all the listings and links to the listings and prices and then fills out automatically google form and submits the data for each listing (Used Beautiful Soup to Scrap and Selenium to fill out forms)
 Demo :
 
