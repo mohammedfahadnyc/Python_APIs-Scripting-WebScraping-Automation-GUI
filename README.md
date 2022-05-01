@@ -3,6 +3,14 @@ Dozens Of Side Projects In Python
 
 Demo of side all projects :
 
+Demo 26 : Cafe API : I've built this cafe REST API completely from scratch, this has a database of cafe's and their information and developers
+can perform CRUD operations using the documentation, which is provided in home page (index.html).also accessible here:https://documenter.getpostman.com/view/14184093/UyrGBuFQ
+Demo here:
+
+https://user-images.githubusercontent.com/54411378/166138956-d926e6d2-66cd-481e-beec-7d62bbabeab6.mov
+
+
+
 Demo 25 : Movie Ranking - User can add any movies they want, they just need to enter the title and it shows all relevant titles,
 then user selects their desired title, add their ratings and reviews and based on ranking,and the movie gets added to user's databse, the program also fetches the movie's description,rating,cover photo and displays them in the website. the home page ranks all movies in the user's database in a descending  order based on ranking. (Flask For Backend, Databased Used SQLite3 and SQLAlchemy, for fetching movies and data, used https://developers.themoviedb.org/3 API).Demo here:
 
