@@ -82,6 +82,24 @@ def conversation_info(client,message):
     print(client)
     print(message)
 
+    
+    
+ #find all channels of a user. How do we find user id? - user sends a message and we hold the user id using the message payload.
+
+@app.message('allchannels')
+def find_all_channels(client,message):
+    user_id = message['user']
+    headers ={'Authorization':'Bearer xoxp-3657324970245-3645627919751-3685545535376-f19195d2433c6379ae66cbbdfdf925e2'}
+    params = {'user':user_id}
+    data = requests.get(url='https://slack.com/api/users.conversations',headers=headers,params=params).json()
+    channels = data['channels']
+    channel_id = []
+    channel_name = []
+    for channel in channels :
+        channel_id.append(channel['id'])
+        channel_name.append(channel['name'])
+    print(channel_id)
+    print(channel_name)
 
 # Start your app
 if __name__ == "__main__":
