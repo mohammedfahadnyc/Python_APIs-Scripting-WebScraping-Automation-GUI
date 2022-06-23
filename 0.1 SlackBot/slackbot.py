@@ -34,6 +34,9 @@ def find_user_id(user_id):
     print(channel_name)
     return jsonify(user=user_id, channels=channel_name)
 
+                                 
+                                
+#2 Add new user to all of hl's channels via url parameter using hl and new user's id                                 
 
 @app.route('/add/<user_id>/<member_id>')
 def add_member(user_id, member_id):
