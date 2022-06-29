@@ -124,3 +124,20 @@ if __name__ == '__main__':
 #         print (f"Successfully added to the channel {channel}")
 #     elif add['ok'] == False :
 #         print(f"Already in {channel}")
+                                 
+                                 
+                                 
+#3. Handling Slash Commands
+    #use slash commands
+# @app.route('/slash',methods=["GET","POST"])
+# def slash():
+#       #sents all the dictionary key val pair
+#     if request.method == "POST" :
+#         data = request.form
+#         user_id = data.get('user_id')
+#         channel_id = data.get('channel_id')
+#         #client.chat_postmessage(channel=channel_id,text="I got the command")
+#         return Response(),200
+#     return ("Simple get request")
+
+                                 
