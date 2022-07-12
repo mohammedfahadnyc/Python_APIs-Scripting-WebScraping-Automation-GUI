@@ -141,3 +141,7 @@ if __name__ == '__main__':
 #     return ("Simple get request")
 
                                  
+
+#extracting userid from /slash command payload
+#data = ImmutableMultiDict([('token', 'qrxsSTRiBNwmHkpBbg4Y20T6'), ('team_id', 'T03KB9JUJ77'), ('team_domain', 'slackbottest-jc28549'), ('channel_id', 'C03L3VBK03A'), ('channel_name', 'test'), ('user_id', 'U03JZJFT1N3'), ('user_name', 'fahadmohammed299299'), ('command', '/slash'), ('text', '<@U03LT7U5DBP|fahadbiznes>'), ('api_app_id', 'A03KSSHPL65'), ('is_enterprise_install', 'false'), ('response_url', 'https://hooks.slack.com/commands/T03KB9JUJ77/3814495845920/rXxVNnnOFFVPt2ZTXgZksDWw'), ('trigger_id', '3784130504694.3657324970245.070398f317dae4af941ee5066c022027')]).to_dict()
+#userid = data['text'].split('|')[0].split('@')[1]
