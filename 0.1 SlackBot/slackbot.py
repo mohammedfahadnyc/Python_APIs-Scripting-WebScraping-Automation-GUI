@@ -156,23 +156,29 @@
 import pytest
 from app import app
 
+# Fixture to create a test client
 @pytest.fixture
 def client():
     with app.test_client() as client:
         yield client
 
+# Test case for finding user channels with a valid user ID
 def test_find_user_channels_valid_user_id(client):
     user_id = 'valid_user_id'
     response = client.get(f'/find-user-channels/{user_id}')
     assert response.status_code == 200
+    # Assert the expected response status code 200, indicating a successful request
     # Assert the expected response based on the valid user ID
 
+# Test case for finding user channels with an invalid user ID
 def test_find_user_channels_invalid_user_id(client):
     user_id = 'invalid_user_id'
     response = client.get(f'/find-user-channels/{user_id}')
     assert response.status_code == 400
+    # Assert the expected response status code 400, indicating a bad request
     # Assert the error response based on the invalid user ID
 
+# Test case for finding user channels with an error communicating with the server
 def test_find_user_channels_error_communicating_with_server(client, monkeypatch):
     def mock_get(*args, **kwargs):
         raise Exception("Error communicating with the server")
@@ -182,15 +188,19 @@ def test_find_user_channels_error_communicating_with_server(client, monkeypatch)
     user_id = 'valid_user_id'
     response = client.get(f'/find-user-channels/{user_id}')
     assert response.status_code == 500
+    # Assert the expected response status code 500, indicating an internal server error
     # Assert the error response when there is an error communicating with the server
 
+# Test case for adding a member successfully to a channel
 def test_add_member_success(client):
     user_id = 'valid_user_id'
     channel_id = 'valid_channel_id'
     response = client.post(f'/add-member/{user_id}/{channel_id}')
     assert response.status_code == 200
+    # Assert the expected response status code 200, indicating a successful request
     # Assert the expected response based on the successful addition of a user to a channel
 
+# Test case for adding a member with an error communicating with the server
 def test_add_member_error_communicating_with_server(client, monkeypatch):
     def mock_post(*args, **kwargs):
         raise Exception("Error communicating with the server")
@@ -201,19 +211,25 @@ def test_add_member_error_communicating_with_server(client, monkeypatch):
     channel_id = 'valid_channel_id'
     response = client.post(f'/add-member/{user_id}/{channel_id}')
     assert response.status_code == 500
+    # Assert the expected response status code 500, indicating an internal server error
     # Assert the error response when there is an error communicating with the server
 
+# Test case for the find_user_all_channels_helper function with a valid user ID
 def test_find_user_all_channels_helper_valid_user_id():
     user_id = 'valid_user_id'
     result = find_user_all_channels_helper(user_id)
     assert result is not None
+    # Assert that the result is not None, indicating successful retrieval of user channels
     # Assert the expected result based on the valid user ID
 
+# Test case for the find_user_all_channels_helper function with an invalid user ID
 def test_find_user_all_channels_helper_invalid_user_id():
     user_id = 'invalid_user_id'
     result = find_user_all_channels_helper(user_id)
     assert result is None
+    # Assert that the result is None, indicating failure to retrieve user channels
     # Assert the expected result based on the invalid user ID
+
 
 
 #6-7-8
@@ -364,3 +380,51 @@ def test_interaction_manager():
     # You can use the test client to simulate the request and assert the response
 
 
+
+
+# all test
+Hello World Test:
+
+Test that the hello_world function returns the expected response.
+Health Test:
+
+Test that the /health endpoint returns the expected response and status code when making a GET request.
+Test that the /health endpoint returns the expected response and status code when making a POST request.
+Find User Channels Test:
+
+Test that the find_user_channels endpoint returns the expected response and status code when providing a valid user ID.
+Test that the find_user_channels endpoint returns an error response and status code when providing an invalid user ID.
+Test that the find_user_channels endpoint returns an error response and status code when encountering an error while communicating with the external server.
+Add Member Test:
+
+Test that the add_member endpoint successfully adds a user to a channel and returns the expected response and status code.
+Test that the add_member endpoint returns an error response and status code when encountering an error while communicating with the external server.
+Find User All Channels Helper Test:
+
+Test the find_user_all_channels_helper function with a valid user ID and verify that it returns the expected response.
+Test the find_user_all_channels_helper function with an invalid user ID and verify that it returns None.
+All Channels Parser Test:
+
+Test the all_channels_parser function with valid channel data and verify that it correctly parses and returns the channel IDs and names.
+Test the all_channels_parser function with invalid channel data and verify that it returns None.
+Invite Helper Test:
+
+Test the invite_helper function with valid parameters and verify that it sends the expected data to the Slack API and returns the expected response.
+Test the invite_helper function with invalid parameters and verify that it returns an error response.
+Get Channels Helper Test:
+
+Test the get_channels_helper function with valid parameters and verify that it sends the expected data to the Slack API and returns the expected response.
+Test the get_channels_helper function with invalid parameters and verify that it returns an error response.
+Add Multiple Users to Channels Async Helper Test:
+
+Test the add_multiple_users_to_channels_async_helper function with valid parameters and verify that it adds the users to the channels and returns the expected response.
+Test the add_multiple_users_to_channels_async_helper function with invalid parameters and verify that it returns an error response.
+All Channels Modal Test:
+
+Test the /preboard-channels endpoint and verify that it returns the expected response and status code.
+Help Nodal Test:
+
+Test the /preboard-help endpoint and verify that it returns the expected response and status code.
+Interaction Manager Test:
+
+Test the /Interaction endpoint with different types of payloads (block actions, view_submission) and verify that it responds correctly based on the payload data.
