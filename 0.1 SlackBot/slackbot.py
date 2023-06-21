@@ -151,7 +151,7 @@
 
 
 
-
+#3-4-5
 
 import pytest
 from app import app
@@ -214,4 +214,153 @@ def test_find_user_all_channels_helper_invalid_user_id():
     result = find_user_all_channels_helper(user_id)
     assert result is None
     # Assert the expected result based on the invalid user ID
+
+
+#6-7-8
+import pytest
+from app import (
+    all_channels_parser,
+    invite_helper,
+    get_channels_helper
+)
+
+def test_all_channels_parser_valid_data():
+    channel_data = {
+        "ok": True,
+        "channels": [
+            {"id": "channel_id1", "name": "channel_name1"},
+            {"id": "channel_id2", "name": "channel_name2"}
+        ]
+    }
+    channel_ids, channel_names = all_channels_parser(channel_data)
+    assert channel_ids == ["channel_id1", "channel_id2"]
+    assert channel_names == ["channel_name1", "channel_name2"]
+
+def test_all_channels_parser_invalid_data():
+    channel_data = {
+        "ok": False,
+        "error": "Invalid channel data"
+    }
+    channel_ids, channel_names = all_channels_parser(channel_data)
+    assert channel_ids is None
+    assert channel_names is None
+
+def test_invite_helper_valid_parameters(monkeypatch):
+    def mock_post(*args, **kwargs):
+        # Simulate successful response from Slack API
+        return {"ok": True}
+
+    monkeypatch.setattr('requests.post', mock_post)
+
+    user_id = "valid_user_id"
+    channel_id = "valid_channel_id"
+    trigger_id = "valid_trigger_id"
+    header = {"Authorization": "Bearer valid_token"}
+    invoker = "valid_invoker"
+
+    response = invite_helper(user_id, channel_id, trigger_id, header, invoker)
+    assert response["ok"] is True
+    # Assert the expected response based on the valid parameters
+
+def test_invite_helper_invalid_parameters(monkeypatch):
+    def mock_post(*args, **kwargs):
+        # Simulate error response from Slack API
+        return {"ok": False, "error": "Invalid parameters"}
+
+    monkeypatch.setattr('requests.post', mock_post)
+
+    user_id = "invalid_user_id"
+    channel_id = "invalid_channel_id"
+    trigger_id = "invalid_trigger_id"
+    header = {"Authorization": "Bearer invalid_token"}
+    invoker = "invalid_invoker"
+
+    response = invite_helper(user_id, channel_id, trigger_id, header, invoker)
+    assert response["ok"] is False
+    # Assert the error response based on the invalid parameters
+
+def test_get_channels_helper_valid_parameters(monkeypatch):
+    def mock_post(*args, **kwargs):
+        # Simulate successful response from Slack API
+        return {"ok": True, "channels": ["channel1", "channel2"]}
+
+    monkeypatch.setattr('requests.post', mock_post)
+
+    user_id = "valid_user_id"
+    chat_channel = "valid_chat_channel"
+    header = {"Authorization": "Bearer valid_token"}
+
+    response = get_channels_helper(user_id, chat_channel, header)
+    assert response["ok"] is True
+    # Assert the expected response based on the valid parameters
+
+def test_get_channels_helper_invalid_parameters(monkeypatch):
+    def mock_post(*args, **kwargs):
+        # Simulate error response from Slack API
+        return {"ok": False, "error": "Invalid parameters"}
+
+    monkeypatch.setattr('requests.post', mock_post)
+
+    user_id = "invalid_user_id"
+    chat_channel = "invalid_chat_channel"
+    header = {"Authorization": "Bearer invalid_token"}
+
+    response = get_channels_helper(user_id, chat_channel, header)
+    assert response["ok"] is False
+    # Assert the error response based on the invalid parameters
+
+#9,10,11,12
+
+import pytest
+from app import (
+    add_multiple_users_to_channels_async_helper,
+    all_channels_modal,
+    help_nodal,
+    interaction_manager
+)
+
+def test_add_multiple_users_to_channels_async_helper_valid_parameters(monkeypatch):
+    def mock_post(*args, **kwargs):
+        # Simulate successful response from Slack API
+        return {"ok": True}
+
+    monkeypatch.setattr('requests.post', mock_post)
+
+    invoking_user = "valid_invoking_user"
+    channel_ids = ["channel_id1", "channel_id2"]
+    user_ids = ["user_id1", "user_id2"]
+    chat_channel = "valid_chat_channel"
+
+    response = add_multiple_users_to_channels_async_helper(invoking_user, channel_ids, user_ids, chat_channel)
+    assert response["ok"] is True
+    # Assert the expected response based on the valid parameters
+
+def test_add_multiple_users_to_channels_async_helper_invalid_parameters(monkeypatch):
+    def mock_post(*args, **kwargs):
+        # Simulate error response from Slack API
+        return {"ok": False, "error": "Invalid parameters"}
+
+    monkeypatch.setattr('requests.post', mock_post)
+
+    invoking_user = "invalid_invoking_user"
+    channel_ids = ["channel_id1", "channel_id2"]
+    user_ids = ["user_id1", "user_id2"]
+    chat_channel = "invalid_chat_channel"
+
+    response = add_multiple_users_to_channels_async_helper(invoking_user, channel_ids, user_ids, chat_channel)
+    assert response["ok"] is False
+    # Assert the error response based on the invalid parameters
+
+def test_all_channels_modal():
+    # Write test to validate the behavior of the all_channels_modal function
+    # You can use the test client to simulate the request and assert the response
+
+def test_help_nodal():
+    # Write test to validate the behavior of the help_nodal function
+    # You can use the test client to simulate the request and assert the response
+
+def test_interaction_manager():
+    # Write test to validate the behavior of the interaction_manager function
+    # You can use the test client to simulate the request and assert the response
+
 
