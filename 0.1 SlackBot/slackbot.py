@@ -15,6 +15,73 @@
 #     return "Hello"
 
 
+#HTTP Request Verification Method. Add @app_before_request to run it for each request, also can if not has_request_context to skip internal calls
+
+# def verify(request):
+#     if "X-Slack-Request-Timestamp" not in request.headers:
+#         return [False,'Missing Timestamp']
+
+#     timestamp = request.headers["X-Slack-Request-Timestamp"]
+#     cutoff = 60*5
+#     if (abs(time.time()) - int(timestamp)) > cutoff:
+#         return [False,"Expired"]
+
+#     request_body = request.get_data().decode()
+#     slack_signature = request.headers["X-Slack-Signature"]
+#     basestring = f'v0:{timestamp}:{request_body}'.encode('utf-8')
+#     client_key = SIGNING_SECRET.encode('utf-8')
+#     provided_signature = f'v0={hmac.new(client_key,basestring,hashlib.sha256).hexdigest()}'
+#     if not hmac.compare_digest(provided_signature,slack_signature):
+#         return [False,'Not Authorized']
+#     return [True,'Authorized']
+
+
+
+#test route for /channels slash command
+# @app.route('/channels',methods=["POST"])
+# def slash():
+#     [validation_result, validation_message] = verify(request)
+#     if not validation_result:
+#         return make_response({'Error' : f'Unauthorized,{validation_message}'},203)
+#     dict = {}
+#     timestamp = request.headers["X-Slack-Request-Timestamp"]
+#     request_body = request.get_data().decode()
+#     slack_signature = request.headers["X-Slack-Signature"]
+#     dict['timestamp'] = timestamp
+#     dict['request_body'] = request_body
+#     dict['Slack_Signature'] = slack_signature
+#     pprint.pprint(dict)
+#     return '',200
+
+
+
+#Below two methods and routes are to fake  http request verification for postman, can use as redirecting technique. When we hit /postman/{route},
+# it sends all the request verification data to that route so it passes the http verification
+
+# def generate_signature(timestamp, body):
+#     basestring = f'v0:{timestamp}:{body}'.encode('utf-8')
+#     client_key = SIGNING_SECRET.encode('utf-8')
+#     return f'v0={hmac.new(client_key, basestring, hashlib.sha256).hexdigest()}'
+
+
+# @app.route('/postman/<path:path>', methods=['GET', 'POST'])
+# def postman_proxy(path):
+#     if path == 'channels':
+#         url = f'https://ece4-2600-4041-5772-f00-1117-24ef-6896-133b.ngrok-free.app/channels'  # replace with the correct server and port
+#         timestamp = str(int(time.time()))
+#         body = request.get_data().decode()
+#         headers = {
+#             'X-Slack-Request-Timestamp': timestamp,
+#             'X-Slack-Signature': generate_signature(timestamp, body)
+#         }
+#         res = requests.post(url, headers=headers, data=body)  # update to match the method (GET, POST, etc.)
+
+#         if res.headers.get('content-type') == 'application/json':
+#             return jsonify(res.json()), res.status_code
+#         else:
+#             return res.text, res.status_code
+
+
 # # take user_id as a url-parameter and returns user's channels
 
 # @app.route('/user/<user_id>')
